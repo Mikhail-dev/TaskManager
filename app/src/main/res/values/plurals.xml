@@ -1,0 +1,63 @@
+<resources>
+    <plurals name="people">
+        <item quantity="zero">%d человек</item>
+        <item quantity="one">%d человек</item>
+        <item quantity="two">%d человека</item>
+        <item quantity="few">%d человека</item>
+        <item quantity="many">%d человек</item>
+        <item quantity="other">%d человек</item>
+    </plurals>
+    <plurals name="checkpoint_with_time">
+        <item quantity="one">%d цели</item>
+        <item quantity="two">%d целям</item>
+        <item quantity="few">%d целям</item>
+        <item quantity="many">%d целям</item>
+        <item quantity="other">%d целям</item>
+    </plurals>
+
+    <!-- для ресурса near_to_cp_many -->
+    <plurals name="checkpoint_without_time">
+        <item quantity="one">%d цель</item>
+        <item quantity="two">%d цели</item>
+        <item quantity="few">%d цели</item>
+        <item quantity="many">%d целей</item>
+        <item quantity="other">%d целей</item>
+    </plurals>
+    <plurals name="meters">
+        <item quantity="zero">%d метров</item>
+        <item quantity="one">%d метр</item>
+        <item quantity="two">%d метра</item>
+        <item quantity="few">%d метра</item>
+        <item quantity="many">%d метров</item>
+        <item quantity="other">%d метров</item>
+    </plurals>
+    <plurals name="megabytes">
+        <item quantity="zero">мегабайт</item>
+        <item quantity="one">мегабайт</item>
+        <item quantity="two">мегабайта</item>
+        <item quantity="few">мегабайта</item>
+        <item quantity="many">мегабайт</item>
+        <item quantity="other">мегабайт</item>
+    </plurals>
+    <plurals name="satellites">
+        <item quantity="one">%d спутник</item>
+        <item quantity="two">%d спутника</item>
+        <item quantity="few">%d спутника</item>
+        <item quantity="many">%d спутников</item>
+        <item quantity="other">%d спутника</item>
+    </plurals>
+    <plurals name="degrees">
+        <item quantity="one">%d градус</item>
+        <item quantity="two">%d градуса</item>
+        <item quantity="few">%d градуса</item>
+        <item quantity="many">%d градусов</item>
+        <item quantity="other">%d градусов</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%d минута</item>
+        <item quantity="two">%d минуты</item>
+        <item quantity="few">%d минуты</item>
+        <item quantity="many">%d минут</item>
+        <item quantity="other">%d минут</item>
+    </plurals>
+</resources>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="long_tap_list">
+        <item>Установить цель</item>
+        <item>В закладки</item>
+        <item>Поделиться</item>
+    </array>
+    <array name="share_group_modes">
+        <item>Персональная ссылка</item>
+        <item>Координаты</item>
+    </array>
+    <array name="share_group_modes_with_address">
+        <item>Персональная ссылка</item>
+        <item>Координаты</item>
+        <item>адрес</item>
+    </array>
+    <array name="share_my_group_modes">
+        <item>Моя персональная ссылка</item>
+        <item>Мои координаты</item>
+    </array>
+    <array name="share_my_group_modes_with_address">
+        <item>Моя персональная ссылка</item>
+        <item>Мои координаты</item>
+        <item>Мой адрес</item>
+    </array>
+    <array name="share_modes">
+        <item>Скопировать</item>
+        <item>Отправить по E-Mail</item>
+        <item>Отправить по СМС</item>
+        <item>Еще&#8230;</item>
+    </array>
+
+    <string-array name="type_of_internet_connection_entries">
+        <item>Любое соединение</item>
+        <item>Только WiFi</item>
+        <item>Никогда</item>
+    </string-array>
+    <string-array name="type_of_internet_connection_entryValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="location_pulse_wait_entries">
+        <item>Никогда</item>
+        <item>Иногда</item>
+        <item>Оптимально</item>
+        <item>Часто</item>
+
+    </string-array>
+    <string-array name="location_pulse_wait_entryValues">
+        <item>0</item>
+        <item>900000</item>
+        <item>600000</item>
+        <item>300000</item>
+
+    </string-array>
+    <string-array name="notification_device_type_entries">
+        <item>Не уведомлять</item>
+        <item>Уведомлять о выбранных</item>
+        <item>Уведомлять обо всех</item>
+    </string-array>
+    <string-array name="notification_device_type_entryValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="notification_device_interval_entries">
+        <item>Единожды</item>
+        <item>Каждые 30 секунд</item>
+        <item>Каждую минуту</item>
+        <item>Каждые 5 минут</item>
+        <item>Каждые 10 минут</item>
+    </string-array>
+    <string-array name="notification_device_interval_entryValues">
+        <item>20</item>
+        <item>30</item>
+        <item>60</item>
+        <item>300</item>
+        <item>600</item>
+    </string-array>
+    <string-array name="notification_checkpoint_with_time_interval_entries">
+        <item>Единожды</item>
+        <item>Каждые 30 секунд</item>
+        <item>Каждую минуту</item>
+        <item>Каждые 5 минут</item>
+        <item>Каждые 10 минут</item>
+    </string-array>
+    <string-array name="notification_checkpoint_with_time_interval_entryValues">
+        <item>20</item>
+        <item>30</item>
+        <item>60</item>
+        <item>300</item>
+        <item>600</item>
+    </string-array>
+    <string-array name="notification_checkpoint_without_time_interval_entries">
+        <item>Единожды</item>
+        <item>Каждые 30 секунд</item>
+        <item>Каждую минуту</item>
+        <item>Каждые 5 минут</item>
+        <item>Каждые 10 минут</item>
+    </string-array>
+    <string-array name="notification_checkpoint_without_time_interval_entryValues">
+        <item>20</item>
+        <item>30</item>
+        <item>60</item>
+        <item>300</item>
+        <item>600</item>
+    </string-array>
+    <string-array name="main_fragments">
+        <item>Список</item>
+        <item>Карта</item>
+        <item>Подробности</item>
+    </string-array>
+
+    <string-array name="tips_location_pulse_mode">
+        <item>Данный энергосберегающий режим позволяет экономить батарею, при этом не отключать программу.</item>
+        <item>Если включен один из режимов указанных выше, которые включают определение местоположения на постоянной основе, то энергосберегающий режим игнорируется.</item>
+        <item>При выборе низкого энергосберегающего режима, интервал между определениями местоположения составляет 5 минут. В среднем и высоком, 10 и 15 минут соответственно. Время определения местоположения 5 минут, либо раньше, если будет определено точное местоположение.</item>
+    </string-array>
+    <string-array name="tips_map_internet_connection_type">
+        <item>Данная функция отвечает за работу загрузки карты. От неё также зависит как загрузка карт, так и предзагрузка карт по маршруту, указанных ниже.</item>
+        <item>Если выбрана настройка \u00ABНикогда\u00BB, то карта будет отображаться в <b>offline</b> режиме, в соответствии от того, что вы загрузили до этого.</item>
+    </string-array>
+    <string-array name="tips_map_download_size">
+        <item>Загружаемый размер может быть меньше указанного. Это зависит от того, загружалась ли до этого данная область каким-либо способом.</item>
+    </string-array>
+    <string-array name="tips_notification_people">
+        <item>Вы можете настроить уведомления о сближении с каким-либо человеком из вашей группы. Если расстояние между вами указанного значения, то вам будет выдано звуковое уведомление, а также текстовое сообщение о том, с кем вы в данный момент сближаетесь.</item>
+        <item>Данный режим может быть полезен при ожидании какого-либо человека. В этом случае, вам даже нет необходимости включать определение собственного местоположения, главное чтобы последнее ваше известное местоположение, было в правильном месте.</item>
+        <item>Если человек неактивен более 6 часов, то уведомления не будут присылаться.</item>
+    </string-array>
+    <string-array name="tips_notification_people_type">
+        <item>При выборе \u00ABУведомлять о выбранных\u00BB, вас будут уведомлять только о тех людях, которых вы отметили. Для того чтобы отметить необходимого человека, следует открыть его подробную информацию и выбрать соответствующую галочку.</item>
+        <item>Внимание! При перезапуске программы, Вам следует снова выбрать нужных людей, если это необходимо.</item>
+    </string-array>
+    <string-array name="tips_notification_cp_no_time">
+        <item>Вы можете выставить уведомление о том, что вы находитесь недалеко от выбранной цели. Это может быть полезно в том случае, если необходимо быть в определенном месте, но время, когда вы будете проезжать данный участок, вы не знаете. Также эти уведомления можно использовать для того, чтобы не проспать свою остановку(студенты оценят).</item>
+        <item>Если цель получила статус \u00ABАктивная\u00BB, то уведомления о ней не будут приходить.</item>
+        <item>Чтобы уведомления корректно работали, следует включить определение местоположения на постоянной основе. Энергосберегающий режим тут может быть помехой, потому как велика вероятность того, что вы проедете необходимое местоположение во время сна выбранного интервала энергосберегающего режима (смотрите настройки \u00ABМестоположение\u00BB).</item>
+    </string-array>
+    <string-array name="tips_notification_cp_with_time">
+        <item>Вы можете быть уведомлены о том, что вы опаздываете на какую-либо цель, для которой определено время. Уведомления начинают приходить, если вы опаздываете на время более 5 минут.</item>
+        <item>Если вы сблизились с целью на расстояние более 200 метров, то уведомления об опоздании перестают приходить.</item>
+        <item>Если цель имеет статус \u00ABОтложен\u00BB (выставляется к цели, которая имела статус \u00ABАктивный\u00BB, но в дальнейшем была выбрана новая активная цель), то уведомления об опоздании к ней также не будут приходить.</item>
+    </string-array>
+    <string-array name="tips_user_info_about_url">
+        <item>Данная ссылка позволяет отслеживать ваше местоположение через нашу диспетчерскую с помощью браузера.</item>
+        <item>Вы можете делиться ей любым удобным для вас способом.</item>
+        <item>Вы также можете сгенерировать новую ссылку, после чего старая ссылка станет нерабочей. Это удобно в случаях, если вы ранее поделились ссылкой, но больше не желаете, чтобы кто-то по ней за вами наблюдал.</item>
+    </string-array>
+
+    <string-array name="tips_my_location_is_not_found_message">
+        <item>Постарайтесь найти открытую местность, чтобы Ваше устройство смогло определить своё местоположение</item>
+    </string-array>
+
+    <string-array name="err_unknown_message">
+        <item>Повторите попытку входа чуть позднее. Если ошибка продолжит повторяться, напишите нам что случилось на support@treqster.net</item>
+    </string-array>
+</resources>

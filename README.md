@@ -1,1 +1,1 @@
-# TaskManager
+This is test project, which show some markers on a map. You can open details for every marker. 

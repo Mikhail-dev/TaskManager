@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.mikhaildev.test.taskmanager.R;
 import com.mikhaildev.test.taskmanager.model.Task;
-import com.mikhaildev.test.taskmanager.util.DateHelper;
+import com.mikhaildev.test.taskmanager.util.DateUtils;
 
 import java.util.Date;
 
@@ -53,7 +53,7 @@ public class TaskAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             VHHeader header = (VHHeader) holder;
             header.text.setText(mTask.getText());
             header.longText.setText(mTask.getLongText());
-            String str = mTask.getLocationText() + " \u2022 " + DateHelper.formatShortDate(new Date(mTask.getDate()));
+            String str = mTask.getLocationText() + " \u2022 " + DateUtils.formatShortDate(new Date(mTask.getDate()));
             header.dateAndLocationTv.setText(str);
         }
     }

@@ -5,6 +5,9 @@ package com.mikhaildev.test.taskmanager.util;
  */
 public class StringUtils {
 
+    public static final String MAP_FRAGMENT  = "map_fragment";
+    public static final String EXTRA_TASK_OBJECT = "extra_task_object";
+
     private StringUtils() {
         //Empty
     }

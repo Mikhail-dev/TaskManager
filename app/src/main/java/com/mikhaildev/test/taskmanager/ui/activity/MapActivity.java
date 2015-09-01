@@ -17,7 +17,7 @@ import com.mikhaildev.test.taskmanager.model.Task;
 import com.mikhaildev.test.taskmanager.network.AsyncResult;
 import com.mikhaildev.test.taskmanager.ui.fragment.MapListener;
 import com.mikhaildev.test.taskmanager.ui.fragment.YandexMapFragment;
-import com.mikhaildev.test.taskmanager.util.UiUtils;
+import com.mikhaildev.test.taskmanager.util.StringUtils;
 
 import java.io.Serializable;
 
@@ -135,17 +135,17 @@ public class MapActivity extends BaseActivity
     }
 
     private void showMapFragment() {
-        YandexMapFragment yandexMapFragment = (YandexMapFragment) getSupportFragmentManager().findFragmentByTag(UiUtils.MAP_FRAGMENT);
+        YandexMapFragment yandexMapFragment = (YandexMapFragment) getSupportFragmentManager().findFragmentByTag(StringUtils.MAP_FRAGMENT);
         if (yandexMapFragment == null) {
             yandexMapFragment = new YandexMapFragment();
         }
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.map, yandexMapFragment, UiUtils.MAP_FRAGMENT);
+        transaction.replace(R.id.map, yandexMapFragment, StringUtils.MAP_FRAGMENT);
         transaction.commit();
     }
 
     private void updateMapMarkers(Task[] tasks) {
-        Fragment fragment = getSupportFragmentManager().findFragmentByTag(UiUtils.MAP_FRAGMENT);
+        Fragment fragment = getSupportFragmentManager().findFragmentByTag(StringUtils.MAP_FRAGMENT);
         if (fragment!=null && (fragment instanceof MapListener) ) {
             ((MapListener)fragment).updateMarkers(tasks);
         }
@@ -162,7 +162,7 @@ public class MapActivity extends BaseActivity
         if (task==null)
             return;
         Intent intent = new Intent(this, DetailActivity.class);
-        intent.putExtra(UiUtils.EXTRA_TASK_OBJECT, (Serializable) task);
+        intent.putExtra(StringUtils.EXTRA_TASK_OBJECT, (Serializable) task);
         startActivity(intent);
     }
 

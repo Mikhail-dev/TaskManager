@@ -8,7 +8,7 @@ import com.mikhaildev.test.taskmanager.R;
 import com.mikhaildev.test.taskmanager.model.Task;
 import com.mikhaildev.test.taskmanager.ui.view.DividerItemDecoration;
 import com.mikhaildev.test.taskmanager.ui.view.adapter.TaskAdapter;
-import com.mikhaildev.test.taskmanager.util.UiUtils;
+import com.mikhaildev.test.taskmanager.util.StringUtils;
 
 import butterknife.Bind;
 
@@ -25,7 +25,7 @@ public class DetailActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        task = (Task) getIntent().getSerializableExtra(UiUtils.EXTRA_TASK_OBJECT);
+        task = (Task) getIntent().getSerializableExtra(StringUtils.EXTRA_TASK_OBJECT);
         if (task==null) {
             finish();
             return;

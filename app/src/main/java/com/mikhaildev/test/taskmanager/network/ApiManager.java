@@ -1,8 +1,6 @@
 package com.mikhaildev.test.taskmanager.network;
 
 import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -10,7 +8,8 @@ import com.mikhaildev.test.taskmanager.R;
 import com.mikhaildev.test.taskmanager.exception.ApiException;
 import com.mikhaildev.test.taskmanager.exception.NetworkConnectionException;
 import com.mikhaildev.test.taskmanager.model.Task;
-import com.mikhaildev.test.taskmanager.util.DateHelper;
+import com.mikhaildev.test.taskmanager.util.DateUtils;
+import com.mikhaildev.test.taskmanager.util.Utils;
 
 import org.json.JSONObject;
 
@@ -33,7 +32,7 @@ public class ApiManager {
      * @throws Exception
      */
     public static Task[] getTasks(Context context) throws Exception {
-        if (!isThereInternetConnection(context))
+        if (!Utils.isThereInternetConnection(context))
             throw new NetworkConnectionException();
 
         HttpURLConnection urlConnection = null;
@@ -41,7 +40,7 @@ public class ApiManager {
             urlConnection = openConnection(URL_TASKS);
             int responseCode = urlConnection.getResponseCode();
             if (HttpURLConnection.HTTP_OK == responseCode) {
-                String taskData = convertStreamToString(urlConnection.getInputStream());
+                String taskData = Utils.convertStreamToString(urlConnection.getInputStream());
                 Type type = new TypeToken<Task[]>() { }.getType();
                 Task[] tasks = new Gson().fromJson(new JSONObject(taskData).getString("tasks"), type);
                 return tasks;
@@ -60,8 +59,8 @@ public class ApiManager {
         urlConnection.setInstanceFollowRedirects(false);
         urlConnection.addRequestProperty("Accept-Language", Locale.getDefault().getLanguage());
         urlConnection.addRequestProperty("X-Requested-With", "XMLHttpRequest");
-        urlConnection.setConnectTimeout(DateHelper.SECOND * 30);
-        urlConnection.setReadTimeout(DateHelper.SECOND * 60);
+        urlConnection.setConnectTimeout(DateUtils.SECOND * 30);
+        urlConnection.setReadTimeout(DateUtils.SECOND * 60);
         return urlConnection;
     }
 
@@ -78,26 +77,5 @@ public class ApiManager {
         } else {
             return new ApiException(new Exception("Response code " + responseCode), R.string.error_code_frmt, responseCode);
         }
-    }
-
-    private static String convertStreamToString(java.io.InputStream is) {
-        java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
-        return s.hasNext() ? s.next() : "";
-    }
-
-    /**
-     * Checks if the device has any active internet connection.
-     *
-     * @return true device with internet connection, otherwise false.
-     */
-    private static boolean isThereInternetConnection(Context context) {
-        boolean isConnected;
-
-        ConnectivityManager connectivityManager =
-                (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
-        isConnected = (networkInfo != null && networkInfo.isConnectedOrConnecting());
-
-        return isConnected;
     }
 }
